@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Worksheet Compare</title>
+    <link href="{{ url_for('static', filename='css/template.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <container>
+    <img src="{{ url_for('static', filename='css/homefarmerslogo.PNG')  }}", class="img"/>
+    <header>
+        Select worksheets to compare<br>
+    </header>
+        <form action ="/result" method="POST" enctype="multipart/form-data">
+                Job1  <input type="file" id="Worksheet1" name="Worksheet1" accept=".csv"><br>
+                Job2  <input type="file" id="Worksheet2" name="Worksheet2" accept=".csv"><br>
+            <br><button id="clicked" onclick="window.location.href='/About'">Submit</button>
+        </form><br>
+        <button onClick="window.location.href=window.location.href">Refresh Page</button>
+    </container>
+</body>
+</html>
