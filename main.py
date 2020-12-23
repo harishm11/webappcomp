@@ -170,9 +170,6 @@ def about():
                     disc1
                 ])
     except Exception as err:
-        if (request.environ.get('HTTP_X_REAL_IP', request.remote_addr)) != '10.184.6.186':
-            return render_template("About.html",tables=["Worksheet compare failed :( .... Please send the worksheets to fix the cause of failure... "], titles=' ')
-        else:
             return render_template("About.html", tables=[err], titles=' ')
 
 
